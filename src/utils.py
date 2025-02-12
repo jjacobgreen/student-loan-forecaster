@@ -54,6 +54,7 @@ def plot_summary(summary_df: pd.DataFrame) -> go.Figure:
     diff = end - start
 
     bar_hovertemplate = """
+        <b>Date:</b> %{x}<br>
         <b>Starting Balance:</b> £%{base:,.2f}<br>
         <b>Ending Balance:</b> £%{y:,.2f}
         <extra></extra>
@@ -95,3 +96,11 @@ def plot_summary(summary_df: pd.DataFrame) -> go.Figure:
         legend=dict(orientation="h", yanchor="bottom", y=-0.3, xanchor="center", x=0.5),
     )
     return fig
+
+
+def get_loan_outcome(results_df: pd.DataFrame) -> tuple[str, str, float]:
+    pay_off_date = results_df["date"].iloc[-1]
+    total_paid_to_date = results_df["payment"].sum()
+    paid_off = results_df["balance"].iloc[-1] <= 0
+    
+    return pay_off_date, "paid" if paid_off else "written", total_paid_to_date

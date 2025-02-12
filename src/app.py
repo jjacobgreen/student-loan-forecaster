@@ -16,6 +16,7 @@ from inputs import (
 )
 from simulate import run_simulation
 from utils import (
+    get_loan_outcome,
     get_monthly_repayment_rate,
     plot_summary,
     summarise,
@@ -80,9 +81,13 @@ if __name__ == "__main__":
         with st.expander("Summary Table:"):
             st.table(summary_df)
 
+        pay_off_date, paid_or_written, total_paid = get_loan_outcome(
+            df
+        )
+
         st.markdown(
-            f"**Years left to pay:** {years_left_to_pay} | **Total to be paid:** £{summary_df['total paid to date'].iloc[-1]:,.2f}"
+            f"**Loan will be {paid_or_written} off in** {pay_off_date.strftime('%B %Y')} **having paid** £{total_paid:,.2f} in total since today."
         )
 
         fig = plot_summary(summary_df)
-        st.plotly_chart(fig, config={"displayModeBar": False})
+        st.plotly_chart(fig, config={"displayModeBar": False}, use_container_width=True)

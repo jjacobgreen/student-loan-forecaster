@@ -43,7 +43,7 @@ def get_annual_repayment_rate_perc() -> float:
 
 def get_lump_sum_payment_today(balance: float) -> float:
     return st.number_input(
-        "Lump sum payment today?",
+        "Make a lump sum payment today?",
         LoanConstants.MIN_LUMP_SUM_PAYMENT_TODAY,
         balance,
         LoanConstants.DEFAULT_LUMP_SUM_PAYMENT_TODAY,

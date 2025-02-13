@@ -28,7 +28,6 @@ THIS_YEAR = datetime.now().year
 
 
 if __name__ == "__main__":
-
     st.set_page_config(
         layout="wide",
         page_icon="💸",
@@ -81,9 +80,7 @@ if __name__ == "__main__":
         with st.expander("Summary Table:"):
             st.table(summary_df)
 
-        pay_off_date, paid_or_written, total_paid = get_loan_outcome(
-            df
-        )
+        pay_off_date, paid_or_written, total_paid = get_loan_outcome(df)
 
         st.markdown(
             f"**Loan will be {paid_or_written} off in** {pay_off_date.strftime('%B %Y')} **having paid** £{total_paid:,.2f} in total since today."

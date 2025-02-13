@@ -102,5 +102,5 @@ def get_loan_outcome(results_df: pd.DataFrame) -> tuple[str, str, float]:
     pay_off_date = results_df["date"].iloc[-1]
     total_paid_to_date = results_df["payment"].sum()
     paid_off = results_df["balance"].iloc[-1] <= 0
-    
+
     return pay_off_date, "paid" if paid_off else "written", total_paid_to_date

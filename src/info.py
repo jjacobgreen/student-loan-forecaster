@@ -24,10 +24,17 @@ def render_faqs() -> None:
     with st.sidebar:
         st.title("FAQs")
 
+        st.header("What is this tool for?")
+        st.write(
+            """
+            I was curious if repaying more than the minimum on my student loan each month (e.g. 12\% over the repayment threshold instead of 9%), or making a lump sum payment now, would save me money in the long run. This tool is intended to (roughly!) model what would happen in each of those cases.
+            """
+        )
+
         st.header("Who is this tool for?")
         st.write(
             """
-            This tool is for anyone who has already graudated, with a Plan 2 student loan in England, who wants to understand how much they might repay over time.
+            This tool is for anyone who has already graduated, with a Plan 2 student loan in England, who wants to understand how much they might repay over time.
             """
         )
 

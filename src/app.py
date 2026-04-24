@@ -87,4 +87,4 @@ if __name__ == "__main__":
         )
 
         fig = plot_summary(summary_df)
-        st.plotly_chart(fig, config={"displayModeBar": False}, use_container_width=True)
+        st.plotly_chart(fig, config={"displayModeBar": False}, width="stretch")

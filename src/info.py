@@ -27,7 +27,7 @@ def render_faqs() -> None:
         st.header("What is this tool for?")
         st.write(
             """
-            I was curious if repaying more than the minimum on my student loan each month (e.g. 12\% over the repayment threshold instead of 9%), or making a lump sum payment now, would save me money in the long run. This tool is intended to (roughly!) model what would happen in each of those cases.
+            I was curious if repaying more than the minimum on my student loan each month (e.g. 12% over the repayment threshold instead of 9%), or making a lump sum payment now, would save me money in the long run. This tool is intended to (roughly!) model what would happen in each of those cases.
             """
         )
 
@@ -91,7 +91,7 @@ def render_faqs() -> None:
         st.header("What is the 'Salary Growth Annealing Rate'?")
         st.write(
             """
-            This is a fancy way of saying that your salary growth rate will decrease over time. It controls the rate at which your salary will plateau. For example, if you set this to 0.9, then your salary growth rate will decrease by 10\% each year.
+            This is a fancy way of saying that your salary growth rate will decrease over time. It controls the rate at which your salary will plateau. For example, if you set this to 0.9, then your salary growth rate will decrease by 10% each year.
             """
         )
 

@@ -1,0 +1,11 @@
+[project]
+name = "student-loan-forecaster"
+version = "0.1.0"
+description = "UK Plan 2 student loan repayment forecaster"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=3.0.2",
+    "plotly>=6.7.0",
+    "python-dateutil>=2.9.0.post0",
+    "streamlit>=1.56.0",
+]
